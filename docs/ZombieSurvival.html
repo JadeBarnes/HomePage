@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michael's Homepage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  
+  <body>
+	<div id="backPanel">
+	
+		<div style="width:100%;height:100%;">
+				
+				
+			<div class="columnHolder" style="justify-content:center;">
+				<div class="topBarButtonPanel" style="height:40px;" >
+					<a href="indexPortfolio.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">Portfolio</p> </a>
+					<a href="index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">Homepage</p> </a>
+					<a href="indexAboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">About me</p> </a>
+				</div>
+			</div>
+			<div class="columnHolder" style="width:100%; height:calc(100% - 90px); position:relative;">
+				<div id="middleBit" style="min-height:100%; width:70%" class="centered">
+					<div class="centered">
+						<div style="margin-top:10px;" class="columnHolder centered">
+
+							<canvas class="canvasMain" id="canvas1" width="500px" height="500px" style="z-index:10; width:500px; height:500px; background-color:#fff; margin-top:20px;"></canvas>
+							<div>
+								<div class="columnHolder centered" style="justify-content:space-between;">
+									<div>
+										<p style="width:100%;text-align:left;" id="healthDisplay" class="gui">Health:</p>
+										<p style="width:100%;text-align:left;" id="gun1Display"class="gui">[Empty]</p>
+										<p style="width:100%;text-align:left;" id="gun2Display"class="gui">[Empty]</p>
+										<p style="width:100%;text-align:left;" id="gun3Display"class="gui">[Empty]</p>
+									</div>
+									<div>
+										<p style="width:100%;text-align:right;" id="highDisplay" class="gui">Highscore:</p>
+										<p style="width:100%;text-align:right;" id="scoreDisplay" class="gui">Score:</p>
+										<p style="width:100%;text-align:right;" id="levelDisplay" class="gui">Level:</p>
+										<p style="width:100%;text-align:right;" id="timeDisplay" class="gui">Time Left:</p>
+									</div>
+									
+								</div>
+								<canvas id="canvasMap" width="50px" height="50px" class="map centered" style="position:relative; bottom:0px"></canvas>
+							</div>
+						</div>
+						<script src="zs/Astar.js"></script>
+						<script src="zs/blocks.js"></script>
+						<script src="zs/Enemy.js"></script>
+						<script src="zs/Player.js"></script>
+						<script src="zs/map.js"></script>
+						<script src="zs/guns.js"></script>
+						<script src="zs/main.js"></script>
+					</div>
+					
+				</div>
+				
+				<div id="middleBit" style="min-height:100%; width:20%;
+				">
+					<h1>Zombie Survival</h1>
+					<p class="generalParagraphs" style="padding-bottom:10px;"> Zombie survival is a game about surviving against zombies, shocking, I know. In this game, you use w,a,s, and d to
+					move around the screen. You can fire your weapons with the arrow keys, and switch your held weapon with 1,2, and 3. Replace your currently held weapon and find new ones by walking into
+					the blue pickups, multicolored pickups are rare, but give super weapons. You can explore around the map (pictured to the right) by walking off the side of the scene. Avoid zombies,
+					and make your way to the exit, the golden square. Once you get there you will need an explosive to break into it. Try to get the highscore!</p>
+					
+					<p class="generalParagraphs"> I first made this game as a sophomore in high school after getting inspired by physics class to make a physics based game.
+					I wrote it in a few weeks using JavaScript. It was my first quality JS game, and as such, it quickly caught on. In school we had these chromebooks, which is
+					what I made it on, after I sent it to a few friends they then sent it to their friends, and so on and so forth. Over the next few years the whole school system
+					was "enjoying" this platformer game. So much so, that the site that I hosted it on was blocked by the school. Still though, this resounding, and unexpected success 
+					led to me making more JS games and other projects, eventually making a scuffed website to act as a linking page to them. The most notable of these games being my
+					Zombie Survival game.</p>
+				</div>
+			</div>
+			
+			
+			<div id="bottomBar">
+				bottom text
+			</div>
+		</div>
+
+	</div>
+  </body>
+  
+  
+</html>
