@@ -50,6 +50,7 @@ html,body {
 	top:0px;
 	height:100px;
 	z-index:100;
+	overflow:auto;
 }
 
 .topBarButtonPanel {
@@ -61,6 +62,7 @@ html,body {
 	
 	display:flex;
 	justify-content: center;
+	overflow:auto;
 }
 
 .deadButton {
@@ -133,7 +135,7 @@ html,body {
 	width:600px;
 	max-width:100%;
 	
-	overflow:auto; 
+	overflow:auto;
 	max-height:calc(100% - 150px);
 	height:calc(100% - 150px);
 	
