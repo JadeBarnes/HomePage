@@ -21,8 +21,7 @@
 					<a href="indexAboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">About me</p> </a>
 				</div>
 				<div class="topBarButtonPanel" style="height:40px;" >
-					<a class="custyButton custyButtonTopBar" id="topBarButton" style="width:200px;" > <p class="bt">About particle life</p> </a>
-					<a class="custyButton custyButtonTopBar" id="topBarButton" style="width:200px;" > <p class="bt">Settings</p> </a>
+					<a class="custyButton custyButtonTopBar" id="topBarButton" style="width:200px;" onclick="myFunction()" > <p class="bt">About particle life</p> </a>
 				</div>
 			</div>
 			
@@ -34,6 +33,30 @@
 			<script type="text/javascript" src="main.js"></script>
 
 		</div>
+		
+		<div class="infoPanel" id="infoPanel" onclick="myFunction()">
+			<h1>
+				Particle Life Simulation
+			</h1>
+			<p class="generalParagraphs">
+				Particle life, sometimes called particle zoo, is a simulation of emergent properties from simple rules. Each particle has a type, which you tell from the color.
+				Each type has a differant attraction or repulsion from every other type. And each type also has a range on it's attraction. With these simple rules that are randomly
+				initialized, we can see complex "lifeforms" emerge from these particles, as groups of them come together acting as a part in the whole.
+			</p>
+			<p>
+				Click on this pop-up to close it.
+			</p>
+		</div>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("infoPanel");
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+			}
+		</script>
 		
 		
 

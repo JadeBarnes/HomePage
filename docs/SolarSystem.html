@@ -20,6 +20,10 @@
 					<a href="index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">Homepage</p> </a>
 					<a href="indexAboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt">About me</p> </a>
 				</div>
+				
+				<div class="topBarButtonPanel" style="height:40px;" >
+					<a onclick="myFunction()" class="custyButton custyButtonTopBar" id="topBarButton" style="width:150px" > <p class="bt">About This Model</p> </a>
+				</div>
 			</div>
 			
 			<canvas id="canvasMain" style="position:absolute; z-index:-10; left:0px; top:0px;"></canvas>
@@ -27,7 +31,65 @@
 
 		</div>
 		
-		
+		<div class="infoPanel" id="infoPanel" onclick="myFunction()">
+			<h1>
+				Solar System Simulation
+			</h1>
+			<h2>
+				Inner Planets
+			</h2>
+			<p class="generalParagraphs">
+				This is a very simple model of our solar system. You can see the planets and each moon, while they're not to scale, they are in the right order.
+			</p>
+			<p class="generalParagraphs">
+				In the very center of the screen you have <b>The Sun, Sol</b>, a gigantic yellow star. About 1.3 million Earths could fit inside the sun, it makes up 99.8% of the entire
+				solar systems mass.
+			</p>
+			<p class="generalParagraphs">
+				The closes planet to the sun is <b>Mercury</b>. It's also (on average) the closes planet to every other planet, which doesn't make sense until you look at the math :v).
+				Mercury is the smallest planet in the system, it's a small rock with an abnormally large metal core. While it's the closest to the sun, it's not the hottest, that's
+				because it has no atmosphere to hold in the heat it gets. That means that the day side is very fucking hot (430C, 800F), but the night side immedietly looses all that heat
+				by radiating it into space, tempuratures can drop as low as -180C, or 290F.
+			</p>
+			<p class="generalParagraphs">
+				Next up, is <b>Venus</b>, our sister planet. Venus is a hellish landscape, with a thick acidic atmosphere, you'd be crushed under 92x the pressure you feel here on Earth.
+				The atmosphere is made up of extreme greenhouse gasses, most of the heat from the sun is trapped inside, and can't be radiated away, making this the hottest planet in the
+				solar system, with tempuratures averaging 465C (870F), that's hot enough to melt lead. Don't forget the acid rain, the atmosphere has a high sulfer content, which turns into
+				sulphuric acid and rains down to the planet. On the mountains of Venus, it gets cold enough for metalic snow to form.
+			</p>
+			<p class="generalParagraphs">
+				We're next! <b>Earth</b>, this small, insignifigant speck that we call our home is the only place in the solar system that can support life. Orbiting around our planet is The Moon.
+			</p>
+			<p class="generalParagraphs">
+				Further out is <b>Mars</b>, named after the god of war in greek mythology because of it's red color. That red hue is actually due to the desert of iron-oxide that covers the planet.
+				Mars, while not volcanicly active anymore, is home to Olympus Mons, the largets volcano in the solar system. It also has polar caps made of dry ice. Mars has two moons, Phobos and Deimos, named
+				after twins in greek mythology who'd accompany Mars into combat.
+			</p>
+			<p class="generalParagraphs">
+				Seperating the inner and outer planet is the asteroid belt.
+			</p>
+			
+			<h2>
+				Outer Planets
+			</h2>
+			<p class="generalParagraphs">
+				I'll get to these eventually.
+			</p>
+			
+			<p>
+				Click on this pop-up to close it.
+			</p>
+		</div>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("infoPanel");
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+			}
+		</script>
 
 	</div>
   </body>
