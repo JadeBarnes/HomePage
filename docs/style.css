@@ -179,7 +179,8 @@ html,body {
 .generalParagraphs {
 	text-align:left;
 	margin:4px;
-	text-indent:20px;"
+	text-indent:20px;
+	padding-bottom:10px;
 }
 
 .formiolli {
