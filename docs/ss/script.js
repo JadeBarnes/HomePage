@@ -10,16 +10,19 @@ var hOff = canvas.height/2;
 var p = [];
 
 function Start(){
-	p.push(new Planet(0,7,RA(),0,"rgb(255,255,0)"));
+	p.push(new Planet(0,7,RA(),0,"rgb(255,255,100)"));		    //The Sun
+	
 	p.push(new Planet(15,1,RA(),6,"rgb(100,100,100)"));
 	p.push(new Planet(20,2,RA(),4,"rgb(255,170,0)"));
 	p.push(new Planet(30,2,RA(),2,"rgb(0,0,255)"));
 	p.push(new Planet(40,1,RA(),1.2,"rgb(255,0,0)"));
-
-	p.push(new Planet(100,4,RA(),.8,"rgb(207,161,70)"));
-	p.push(new Planet(160,4,RA(),.5,"rgb(255,211,120)"));
+	
+	var jupiterPos = RA();
+	p.push(new Planet(100,4,jupiterPos,.8,"rgb(207,161,70)"));        //Jupiter
+	p.push(new Planet(160,3.5,RA(),.5,"rgb(255,211,120)"));
 	p.push(new Planet(210,3,RA(),.2,"rgb(150,150,255)"));
 	p.push(new Planet(270,3,RA(),.1,"rgb(0,0,255)"));
+
 
 	p.push(new Moon(4,1,RA(),9,"rgb(100,100,100)",p[3]));
 
@@ -30,15 +33,28 @@ function Start(){
 	p.push(new Moon(8,.5,RA(),10,"rgb(150,100,100)",p[5]));
 	p.push(new Moon(10,.5,RA(),8,"rgb(75,75,75)",p[5]));
 	p.push(new Moon(12,1,RA(),6,"rgb(100,100,100)",p[5]));
-
+	
+	//Saturns Rings
 	for(var i=0;i<200;i++){
-		p.push(new Moon(6,.5,RA(),9*Math.random(),"rgb(205,161,70)",p[6]));
+		p.push(new Moon(6,.1,RA(),9*Math.random(),"rgb(205,161,70)",p[6]));
 	}
-
+	
+	//Asteroid Belt
 	for(var i=0;i<100;i++){
 		p.push(new Planet(50+(Math.random()*10),.5,RA(),.1+Math.random()*.7,"rgb(100,100,100)"));
 	}
-
+	
+	//Trojon Asteroids
+	var trojon1Pos = jupiterPos - 60;
+	var trojon2Pos = jupiterPos + 60;
+	for(var i=0;i<15;i++){
+		p.push(new Planet(100+(Math.random()*7),.5,trojon1Pos + ((Math.random()*10)-5),.8,"rgb(100,100,100)"));
+	}
+	for(var i=0;i<15;i++){
+		p.push(new Planet(100+(Math.random()*7),.5,trojon2Pos + ((Math.random()*10)-5),.8,"rgb(100,100,100)"));
+	}
+	
+	//Kieper Belt
 	for(var i=0;i<1000;i++){
 		p.push(new Planet(280+(Math.random()*150),.5,RA(),.01+Math.random()*.07,"rgb(100,100,200)"));
 	}
