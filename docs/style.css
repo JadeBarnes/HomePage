@@ -5,6 +5,10 @@
 	padding:0px;
 }
 
+img {
+	image-rendering: pixelated;
+}
+
 p.title {
 	font-size:50px;
 }
@@ -170,6 +174,7 @@ html,body {
 	right:0px;
 	bottom:0px;
 	height:50px;
+	padding-top:7px;
 }
 
 
@@ -201,8 +206,10 @@ html,body {
 .rowHolder{
 	max-height:100%;
 	width:100%;
+	max-width:100%;
 	display:flex;
 	flex-direction:column;
+	overflow:hidden;
 }
 
 .spaceBetween{
@@ -219,14 +226,16 @@ html,body {
 .portfolioPiece {
 	height:20px;
 	width:calc(100% - 4px);
+	max-width:calc(100% - 4px);
 	background-color:#ddd;
 	transition-duration:0.1s;
 	margin:2px;
 	text-decoration:none;
 	color:black;
+	overflow:hidden;
 }
 .portfolioPiece:hover {
-	height:20px;
+	min-height:20px;
 	width:calc(100% - 4px);
 	margin:2px;
 	background-color:#eee;
@@ -251,7 +260,6 @@ html,body {
 	font-size:14px;
 	margin-top:2px;
 	margin-right:2px;
-	white-space:nowrap;
 }
 .ppL {
 	text-align:right;
@@ -260,7 +268,11 @@ html,body {
 	white-space:nowrap;
 }
 
-
+@media only screen and (max-width : 600px){
+    .ppR {
+		display:none;
+	}
+}
 
 
 .infoPanel {
