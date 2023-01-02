@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michael's Homepage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="Astar/favicon.png"/>
+  </head>
+  
+  
+  <body>
+	<div id="backPanel">
+	
+		<div style="width:100%;height:100%;">
+				
+				
+			<div class="columnHolder" style="justify-content:center;">
+				<div class="topBarButtonPanel" style="height:40px;" >
+					<a href="index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/home.png" class="buttonImg">Homepage</p> </a>
+					<a class="deadButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/portfolio.png" class="buttonImg">Portfolio</p> </a>
+					<a href="AboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/aboutme.png" class="buttonImg">About me</p> </a>
+				</div>
+			</div>
+			<div class="columnHolder" style="width:100%; height:calc(100% - 90px); position:relative;">
+				<div id="middleBit" style="min-height:100%; width:70%" class="centered">
+					<div style="margin-top:10px;" class="columnHolder centered">
+						
+						<canvas id="canvas1" width="500" height="500" style="border:1px solid #000000;" class="centered"></canvas>
+						<script src="Astar/GoodAStar.js"></script>
+						<script src="Astar/script.js"></script>
+					</div>
+				</div>
+				
+				<div id="middleBit" style="min-height:100%; width:20%;">
+					<h1>A* Pathfinding</h1>
+					<p class="generalParagraphs" style="padding-bottom:10px;">A* is a powerful pathfinding algorithm. In this simulation, we;re trying to find a path (green) from the red
+					square, to the blue square.</p>
+					
+				</div>
+			</div>
+			
+			
+			<div id="bottomBar">
+				<p>Contact Me At:</p>
+				<p>michaelapbarneswork@gmail.com</p>
+			</div>
+		</div>
+
+	</div>
+  </body>
+  
+  
+</html>

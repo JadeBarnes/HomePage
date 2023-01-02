@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michael's Homepage</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="../favicon.png"/>
+  </head>
+  
+  
+  <body>
+	<div id="backPanel">
+		<div style="width:100%; height:100%;" id="canvasHolder">
+			<canvas id="canvas">
+			</canvas>
+		</div>
+		<script type="text/javascript" src="../particle.js"></script>
+		<script type="text/javascript" src="../main.js"></script>
+	
+		<div style="width:100%;height:100%;">
+			<div class="topBar">
+				<p class="title">Michael Barnes</p>
+				<hr class="title">
+				<div class="topBarButtonPanel">
+					<a href="../index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../icons/home.png" class="buttonImg">Homepage</p> </a>
+					<a class="deadButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../icons/portfolio.png" class="buttonImg">Portfolio</p> </a>
+					<a href="../AboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../icons/aboutme.png" class="buttonImg">About me</p> </a>
+				</div>
+				
+			</div>
+		
+			<div id="middleBit">
+				<h1>Portfolio</h1>
+				<p>	Here is an archive of most of my personal projects.</p>
+				<p>	Each catagory is sorted chronologically from the oldest to newest.</p>
+				<p style="padding-bottom:15px;">Click on a project to learn more about it.</p>
+				
+				<div class="columnHolder">
+					
+					<div class="rowHolder">
+						<p><b>Games</b></p>
+						<a href="TheAdventuresOfSomeGuy.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">TAOSG</p>  <p class="ppR">My first ever game</p>  </a>
+						<a href="Platformer.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Platformer</p>  <p class="ppR">A simple, unforgiving platformer</p>  </a>
+						<a href="ZombieSurvival.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Zombie Suvival</p>  <p class="ppR">Survive and explore</p>  </a>
+						<a href="BlasterBoi.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Blaster Boi</p>  <p class="ppR">Survive against waves of enemies</p>  </a>
+						<a href="DwarfDigger.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Dwarf Digger</p>  <p class="ppR">My APCSP final project</p>  </a>
+					</div>
+					
+					<div class="rowHolder">
+						<p><b>Simulations/Experiments</b></p>
+						<a href="ParticleLife.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Particle Life</p>  <p class="ppR">What you see in the background</p>  </a>
+						<a href="Pathfinding.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">A*</p>  <p class="ppR">A pathfinding algorithm</p>  </a>
+						<a href="SolarSystem.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Solar System</p>  <p class="ppR">Model of the planets and moons</p>  </a>
+						<a href="CellularAutomata.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Cellular Automata</p>  <p class="ppR">The game of life</p>  </a>
+						
+						<!--<p><b>Other</b></p>
+						<a href="Formioli.html" class="columnHolder spaceBetween portfolioPiece"> <p class="ppL">Formioli</p>  <p class="ppR">My custom font</p>  </a>-->
+
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			
+			<div id="bottomBar">
+				<p>Contact Me At:</p>
+				<p>michaelapbarneswork@gmail.com</p>
+			</div>
+		</div>
+
+	</div>
+  </body>
+  
+  
+</html>

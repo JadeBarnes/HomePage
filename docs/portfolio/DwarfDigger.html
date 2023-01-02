@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michael's Homepage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="dd/favicon.png"/>
+  </head>
+  
+  
+  <body>
+	<div id="backPanel">
+		
+		
+	
+		<div style="width:100%;height:100%;">
+			<div class="columnHolder" style="justify-content:left;">
+				<div class="topBarButtonPanel" style="height:38px;" >
+					<a href="Portfolio.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/back.png" class="buttonImg">Back</p> </a>
+					<a href="index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/home.png" class="buttonImg">Home</p> </a>
+				</div>
+				<div class="topBarButtonPanel" style="height:38px;" >
+					<a class="custyButton custyButtonTopBar" id="topBarButton" style="width:200px;" onclick="myFunction()" > <p class="bt"><img src="icons/questionmark.png" class="buttonImg">About Dwarf Digger</p> </a>
+				</div>
+			</div>
+			
+			<div style="width:100%; height:calc(100% - 40px); position:relative;" id="canvasHolder">
+				<canvas id="canvasMain"></canvas>
+			</div>
+			<script src="dd/crafting.js"></script>
+			<script src="dd/Media.js"></script>
+			<script src="dd/Tile.js"></script>
+			<script src="dd/Blocks.js"></script>
+			<script src="dd/Items.js"></script>
+			<script src="dd/Chunk.js"></script>
+			<script src="dd/player.js"></script>
+			<script src="dd/main.js"></script>
+
+		</div>
+		
+		<div class="infoPanel" id="infoPanel" onclick="myFunction()">
+			<h1>
+				Dwarf Digger
+			</h1>
+			<p class="generalParagraphs" style="margin-bottom:10px">
+				Dwarf Digger is a little mining and craft-em-up game that I made for my AP Computer Science Principles class's final exam. To play this game use the w,a,s, and d keys
+				to explore around the map. You can click on tiles to mine them, and right click with them selected to place them. To select tiles from your inventory (top-left), use
+				the scroll wheel until it's highlighted. Pressing and holding E will open the crafting menu, you can scroll through the recipes and craft them by clicking on them. You 
+				will need the materials, and will also sometimes need to be next to a crafting station, like a furnace. After crafting a new pickaxe or other piece of equipment, select it
+				and press F to equip it. You can also drop something by selecting it and pressing X.
+			</p>
+			<p class="generalParagraphs" style="margin-bottom:10px">
+				This is by far the most advanced game that I created in highschool. It has a scalable world that can stretch into all directions as long as you want it too. It does this
+				by breaking the world into chunks, so that only certain sections of the world have to be considered in calculations and rendering. Also to save on the very limited memory
+				of the chromebook, I had to generate a collision mesh around each block so that blocks surrounded by others didn't have collision, as there would be no way to collide with
+				them without first colliding with the surrounding tiles. It uses a tileset for texturing, and a separate overlay tileset for certain minerals. This was also my very first
+				implementation of an inventory system and a crafting system.
+			</p>
+			<p>
+				Click on this pop-up to close it.
+			</p>
+		</div>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("infoPanel");
+			  if (x.style.display === "none") {
+				x.style.display = "block";
+			  } else {
+				x.style.display = "none";
+			  }
+			}
+		</script>
+		
+		
+
+	</div>
+  </body>
+  
+  
+</html>

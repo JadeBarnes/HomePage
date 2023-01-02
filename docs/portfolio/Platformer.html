@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Michael's Homepage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="platformer/favicon.png"/>
+  </head>
+  
+  
+  <body>
+	<div id="backPanel">
+	
+		<div style="width:100%;height:100%;">
+				
+				
+			<div class="columnHolder" style="justify-content:center;">
+				<div class="topBarButtonPanel" style="height:40px;" >
+					<a href="index.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/home.png" class="buttonImg">Homepage</p> </a>
+					<a class="deadButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/portfolio.png" class="buttonImg">Portfolio</p> </a>
+					<a href="AboutMe.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="icons/aboutme.png" class="buttonImg">About me</p> </a>
+				</div>
+			</div>
+			<div class="columnHolder" style="width:100%; height:calc(100% - 90px); position:relative;">
+				<div id="middleBit" style="min-height:100%; width:70%" class="centered">
+					<div style="margin-top:10px;" class="columnHolder centered">
+						
+						<canvas class="centered" id="canvas" width="500px" height="500px" style="z-index:10; width:500px; height:500px; background-color:#fff; margin-top:20px;"></canvas>
+						<script src="platformer/Player.js"></script>
+						<script src="platformer/Objects.js"></script>
+						<script src="platformer/Levels.js"></script>
+						<script src="platformer/Main.js"></script>
+					</div>
+				</div>
+				
+				<div id="middleBit" style="min-height:100%; width:20%;">
+					<h1>Platformer</h1>
+					<p class="generalParagraphs" style="padding-bottom:10px;">In this simple platformer, you move using the w,a,s, and d keys to move the red player around the scene,
+					you can wall jump by holding up and moving into the side of a wall. Your goal is to try and get to the blue exit and avoid the red hazards to pass onto the next level.
+					There are 8 levels in total, good luck! </p>
+					
+					<p class="generalParagraphs"> I first made this game as a sophomore in high school after getting inspired by physics class to make a physics based game.
+					I wrote it in a few weeks using JavaScript. It was my first quality JS game, and as such, it quickly caught on. In school we had these chromebooks, which is
+					what I made it on, after I sent it to a few friends they then sent it to their friends, and so on and so forth. Over the next few years the whole school system
+					was "enjoying" this platformer game. So much so, that the site that I hosted it on was blocked by the school. Still though, this resounding, and unexpected success 
+					led to me making more JS games and other projects, eventually making a scuffed website to act as a linking page to them. The most notable of these games being my
+					Zombie Survival game.</p>
+				</div>
+
+			</div>
+			
+			
+			<div id="bottomBar">
+				<p>Contact Me At:</p>
+				<p>michaelapbarneswork@gmail.com</p>
+			</div>
+		</div>
+
+	</div>
+  </body>
+  
+  
+</html>
