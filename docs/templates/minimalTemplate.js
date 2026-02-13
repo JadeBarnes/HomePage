@@ -7,7 +7,7 @@ const infoPanel = document.createElement("template");
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
 	//Trim directory
-while( path.indexOf("docs") != 0 ){
+while( path.indexOf("HomePage") != 0 ){
 	path = path.substring( path.indexOf("/") + 1 );
 };
 	//Find all forward slashes
@@ -15,9 +15,6 @@ let depth = 0;
 while( path.indexOf("/") != -1 ){
 	path = path.substring( path.indexOf("/") + 1 );
 	depth++;
-	if (depth >= 100) {
-		break;
-	};
 };
 //console.log("File Depth = " + depth);
 	//Generate directory ammendment

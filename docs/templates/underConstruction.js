@@ -11,7 +11,7 @@ const noticeBar = document.createElement("template");
 
 let pathForNotice = location.pathname.toString();
 	//Trim directory
-while( pathForNotice.indexOf("docs") != 0 ){
+while( pathForNotice.indexOf("HomePage") != 0 ){
 	pathForNotice = pathForNotice.substring( pathForNotice.indexOf("/") + 1 );
 };
 	//Find all forward slashes
@@ -19,9 +19,6 @@ let depthForNotice = -1;
 while( pathForNotice.indexOf("/") != -1 ){
 	pathForNotice = pathForNotice.substring( pathForNotice.indexOf("/") + 1 );
 	depthForNotice++;
-	if (depthForNotice >= 100) {
-		break;
-	};
 };
 let toRootDirectoryForNoticeBar = ``;
 let iNotice = 1;
