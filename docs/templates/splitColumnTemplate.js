@@ -19,6 +19,9 @@ let depth = 0;
 while( path.indexOf("/") != -1 ){
 	path = path.substring( path.indexOf("/") + 1 );
 	depth++;
+	if (depth >= 100) {
+		break;
+	};
 };
 //console.log("File Depth = " + depth);
 	//Generate directory ammendment

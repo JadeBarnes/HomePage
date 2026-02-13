@@ -19,6 +19,9 @@ let depthForNotice = -1;
 while( pathForNotice.indexOf("/") != -1 ){
 	pathForNotice = pathForNotice.substring( pathForNotice.indexOf("/") + 1 );
 	depthForNotice++;
+	if (depthForNotice >= 100) {
+		break;
+	};
 };
 let toRootDirectoryForNoticeBar = ``;
 let iNotice = 1;
