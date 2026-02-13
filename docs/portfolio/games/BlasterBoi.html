@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="icon" type="image/png" href="blasterBoi/favicon.png"/>
+		<link href="../../style.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+  
+	<body>
+		<template id="pageContent">
+			<div id="middleBit">
+				<h1>Blaster Boi</h1>
+				
+				<!-- Edited 6/11/24 -->
+				<p class="generalParagraphs">
+					<img src="blasterBoi/Blaster_Boi.png" style="width:64px;height:64px;float:right;">
+					Blaster Boi is a game that I always forget about.
+					Not because it's a bad game, but because it's a surreal achievement.
+					It doesn't feel real that I created a game in about a week that was this advanced for its time.
+					But I did, and as of May 25<sup style="font-size: 10px;">th</sup>, 2021, I have officially recovered it and can always remember it.
+				</p>
+				<p class="generalParagraphs">
+					This game was created in an attempt to explore programming a game in pure C#.
+					Prior to this, I was using the Unity game engine.
+					However, I wanted more control over the underlying systems and wanted to minimize the bloat that comes packaged with Unity.
+					So I embarked on developing a game at a much lower level: Blaster Boi.
+				</p>
+				<p class="generalParagraphs">
+					In this game, you use the W, A, S, and D keys to move, and hold Shift to sprint.
+					You can shoot with the left mouse button.
+					Both sprinting and shooting will consume a limited pool of energy, which will recharge over time.
+					Your objective is to defend yourself from various enemies, whose difficulty and numbers will increase over time.
+				</p>
+				<p class="generalParagraphs">
+					Blaster Boi was a milestone in multiple ways.
+					Not only was it the first game I created in C#, it was also the first program I wrote proper AI for.
+					You could argue there's some form of AI in <a href="ZombieSurvival.html">Zombie Survival</a>, but the intelligence in this is more diverse and intelligent.
+					There are a few types of enemies: Maws, Gazers, Psychics, Big Brains, and their minions, Brainlings.
+				</p>
+				<p class="generalParagraphs" style="text-indent:0px;">
+					<img alt="Picture of a Maw enemy" src="blasterBoi/Enemy_Maw.png" style="width:32px;height:32px;float:left;margin-right:5px;">
+					Maws are the simplest and first to be implemented. They walk towards the player in a straight line.
+					They serve as fodder enemies and can easily be ignored.
+				</p>
+				<p class="generalParagraphs enemy" style="text-indent:0px;">
+					<img alt="Picture of a Gazer" src="blasterBoi/Enemy_Gazer.png" style="width:32px;height:32px;float:left;margin-right:5px;">
+					Gazers are a slight step up.
+					They will chase the player and periodically shoot bullets.
+					While still considered fodder enemies, they pose a greater threat and can't be ignored as easily.
+				</p>
+				<p class="generalParagraphs" style="text-indent:0px;">
+					<img alt="Picture of a Psychic enemy" src="blasterBoi/Enemy_Psychic.png" style="width:32px;height:32px;float:left;margin-right:5px;">
+					Psychics are intimidating when you first encounter them.
+					They maintain their distance from the player while rapidly shooting bolts of energy at them.
+					Eventually, they stop and unleash a low-accuracy spray of energy, which can easily kill the player if caught in it.
+				</p>
+				<p class="generalParagraphs" style="text-indent:0px;">
+					<img alt="Picture of a Big Brain enemy" src="blasterBoi/Enemy_BB.png" style="width:32px;height:32px;float:left;margin-right:5px;">
+					Big Brains are my favorite; they're more of a boss-type enemy.
+					Their AI is broken up into states.
+					In their initial state, they teleport around the screen and unleash waves of energy towards the player.
+					After a few teleports, they transition into a second state where they reflect incoming projectiles within a large radius.
+					Once they finish, their final state is to spawn a few Brainlings and enter an idle phase, allowing the player a chance to deal with them.
+					Finally, the state machine resets to the initial state.
+				</p>
+				<p class="generalParagraphs" style="text-indent:0px;">
+					<img alt="Picture of a Brainling enemy" src="blasterBoi/Enemy_Brainling.png" style="width:16px;height:16px;float:left;margin-right:5px;">
+					Brainlings are simple enemies; they're small and fast, darting erratically to chase the player.
+					They explode into bullets either upon getting close to the player or when killed.
+				</p>
+				<p class="generalParagraphs">
+					You can tell that I had a lot of fun designing the AI for this game, particularly the diverse moveset of the Big Brains.
+					Smart AI has always fascinated me.
+					Watching AI adapt to new information and react accordingly is immensely intriguing and can greatly enhance a game for me.
+					While this game isn't immersive and the AI can't respond to new information, it was my attempt at experimenting with new ideas and implementing AI that I found enjoyable.
+				</p>
+				<p>
+					You can download and play the game here. Your computer will think it's a virus, but there's no malicious code included.
+				</p>
+				<a href="blasterBoi/Blaster Boi.zip" download="Blaster Boi">Download Zip (58KB)</a>
+				
+				<!--
+				<p class="generalParagraphs">
+					<img src="blasterBoi/Blaster_Boi.png" style="width:64px;height:64px;float:right;">
+					Blaster Boi is one of those games that just feels surreal to me, like it truly doesn't exist. But, as of 5/25/2021 I have recovered it and can now publish it
+					and properly archive it. I made Blaster Boi out of the desire to make a game in pure C#, no pre-made game engine, nothing. I wanted to see what it was like to
+					create something on a lower level. It's always been a desire of mine to forgo game engines entirely and just make what I need to myself, so I channeled those
+					desires into Blaster Boi.
+				</p>
+				<p class="generalParagraphs">
+					In this game, you use w, a, s, and d to move around the screen, you can press and hold shift to sprint, and click the mouse to shoot. Shooting and sprinting will
+					use up a limited pool of energy, which will recharge over time. You must defend yourself from various enemies that increase in difficulty and number as time
+					goes on.
+				</p>
+				<p class="generalParagraphs">
+					Blaster Boi was a milestone for me, not only because it was pure C#, but because it was the first program I wrote proper AI for. In the game there are
+					a few different kinds of enemies, Maws, Gazers, Psychics, Big Brains, and their minions - brainlings. <b>Maws</b> were by far the simplest, they move toward the
+					player, that's it. <b>Gazers</b> were a small step up, they'd move toward the player and shoot a small bullet
+					at them periodically. <b>Psychics</b> will keep their distance from the player while shooting rapid fire bolts of energy. After a few seconds they will stop
+					and fire a low-accuracy spray of particles at the player. <b>Big Brains</b> are my personal favorite. They are a boss-like mob that will teleport around the screen while firing waves of energy
+					toward the player, teleport to a spot and reflect nearby projectiles shot by the player for a short period, and finally they will spawn a Brainling. <b>Brainlings</b>
+					will erratically move toward the player and explode into 8 bullets when killed or when they get close enough to the player.
+				</p>
+				<p class="generalParagraphs">
+					As you can tell, I really liked working on this game. Working with the AI for this game was a pleasure, I've always been
+					fascinated by how the AI in games function. This game really solidified those feelings.
+				</p>
+				<p>
+					You can download and play the game here:
+				</p>
+				<a href="blasterBoi/Blaster Boi.zip" download="Blaster Boi">Download Zip (58KB)</a>
+				-->
+			</div>
+		</template>
+		<script type="text/javascript" src="../../templates/standardTemplate.js"></script>
+	</body>
+</html>

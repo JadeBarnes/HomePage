@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="icon" type="image/png" href="Astar/favicon.png"/>
+		<link href="../../style.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+  
+	<body>
+		<template id="mainColumnContent">
+			<canvas id="canvas1" width="500" height="500" style="border:1px solid #000000;" class="centered"></canvas>
+		</template>
+		
+		<template id="infoColumnContent">
+			<h1>A* Pathfinding</h1>
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				A* is basic yet powerful pathfinding algorithm. I needed to understand this algorithm in order to finish my Zombie Survival game, and I'm happy to say that this knowledge has come in handy years down the line as well.
+			</p>
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				In this demonstration, we're trying to find a path from the Red square to the Blue square, but the path is blocked by the Black squares.
+				The path to the destination can move diagonally across empty cells, but cannot move diagonally around Black cells.
+				The environment is set up in a square grid, which is common for pathfinding.
+				However, this algorithm can handle other environments as well.
+				Each cell of the grid has 8 neighboring cells, the cell keeps track of the ones that can be traversed into.
+			</p>
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				So, to start the algorith, we push the cells immediately accessible to the Red square into a list called the "Open Set."
+				Each cell in the Open Set is marked with a light red.
+				The algorithm updates each of these cells with a cost associated with traveling to it, this is called the "G Cost".
+				Each cell initializes this cost to infinity.
+				Moving horizontally or vertically into a cell has a cost of 1, because it's a square grid.
+				Moving diagonally into a cell has a cost of 1.4.
+				Each cell in the Open Set also stores an "H Cost" or "Heuristic Cost."
+				The heuristic function is simply an estimate to how far away the cell is to the destination, which is estimated using the pythagrian thearum.
+				Finally, each cell stores an "F Cost" or "Final Cost," this is equal to the G Cost plus the H Cost.
+				The algorithm sorts the set of Open Set cells by their F Cost in ascending order, and chooses the first element to examine in-depth.
+				When examining a cell, the algorithm adds all cells that aren't already in the Open Set to the Open Set, but the algorithm will look at *all* adjacent cells, including those in the Open Set for this next step.
+				All adjacent cells have their G Cost updated to the current cells G Cost plus 1 or 1.4, depending on the movement cost.
+				These cells only update their G Cost if it's less than what it is currently.
+				For brand new cells that weren't already examined, it'll always be updated since it was initialized to infinity.
+				For old cells that were in the Open Set prior to this it'll only update if a new, shorter route was found.
+				If the G Cost is updated, the adjacent cell will store a pointer to the current cell.
+				The F Cost is calculated, the Open Set is sorted, and the first element is chosen.
+			</p>
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				This process repeats until the destination is reached, at which point we recursively follow the breadcrumb trail of pointers back to the starting destination.
+				The trail is stored into a final list representing the route taken to reach the destination, this is displayed with the Green cells.
+				If the Open Set is ever depleted, that means that we've searched all possible paths, but haven't found the destination.
+				This means that the route is blocked completely by an impassable obstical, so the algorithm stops.
+				To save on computation time, the algorithm can end prematurely by keeping track of how many steps have been taken.
+				If this exceeds a certain threshold, the algorithm terminates.
+				Because this demonstration is slowed down to show each step, it wont have any performance overhead.
+				So while this feature is implimented into the algorithm, it has been disabled.
+				You can see this feature in action if you play the Zombie Survival game I made - if the titular zombies are too far from the player they'll stop moving.
+			</p>
+		</template>
+		
+		<script type="text/javascript" src="../../templates/splitColumnTemplate.js"></script>
+		<script type="text/javascript" src="Astar/GoodAStar.js" class="templateScript"></script>
+		<script type="text/javascript" src="Astar/script.js" class="templateScript"></script>
+	</body>
+</html>

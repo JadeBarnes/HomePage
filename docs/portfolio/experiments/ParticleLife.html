@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="icon" type="image/png" href="../../particleLife/pl-favicon.png"/>
+		<link href="../../style.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+  
+	<body>
+		<template id="pageContent">
+			<div style="width:100%; height:calc(100% - 40px); position:relative;" id="canvasHolder">
+				<canvas id="canvasParticleLife">
+				</canvas>
+			</div>
+			<script type="text/javascript" src="../../particleLife/particle.js" defer></script>
+			<script type="text/javascript" src="../../particleLife/main.js" defer></script>
+		</template>
+		
+		<template id="infoPanelContent">
+			<h1>
+				Particle Life Simulation
+			</h1>
+			<p class="generalParagraphs">
+				Particle life is a simulation of emergent properties from simple rules. Each particle has a type, which you can tell from the color.
+				Each type has a differant attraction or repulsion to every other type. Every attraction value also has a range in which it can affect other particles.
+			</p>
+			<p class="generalParagraphs">
+				Type, Attraction, and Range. With these simple rules, we can see all sorts of life-like structures emerge.
+			</p>
+			<p class="generalParagraphs">
+				In this simulation, all values are randomly initialized. The simulation will reset every 10 seconds.
+			</p>
+			<p>
+				Click on this pop-up to close it.
+			</p>
+		</template>
+	
+		<script type="text/javascript" src="../../templates/minimalTemplate.js"></script>
+	</body>
+</html>

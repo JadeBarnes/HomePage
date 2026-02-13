@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="icon" type="image/png" href="zombieSurvival/favicon.png"/>
+		<link href="../../style.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+  
+	<body>
+		<template id="mainColumnContent">
+			<div style="width:100%">
+				<div style="width:50%; float:left; display:flex; justify-content:flex-end">
+					<canvas class="canvasZombieSurvivalMain" id="canvas1" width="500px" height="500px" style="z-index:10; width:500px; height:500px; background-color:#fff; margin-top:20px;"></canvas>
+				</div>
+				<div style="width:50%; display:inline-flex; float:right; justify-content:flex-start">
+					<div style="display:inline; justify-content:initial">
+						<div class="centered columnHolder" style="justify-content:space-between; width:400px;">
+							<div>
+								<p style="width:100%;text-align:left;" id="healthDisplay" class="gui">Health:</p>
+								<p style="width:100%;text-align:left;" id="gun1Display"class="gui">[Empty]</p>
+								<p style="width:100%;text-align:left;" id="gun2Display"class="gui">[Empty]</p>
+								<p style="width:100%;text-align:left;" id="gun3Display"class="gui">[Empty]</p>
+							</div>
+							<div>
+								<p style="width:100%;text-align:right;" id="highDisplay" class="gui">Highscore:</p>
+								<p style="width:100%;text-align:right;" id="scoreDisplay" class="gui">Score:</p>
+								<p style="width:100%;text-align:right;" id="levelDisplay" class="gui">Level:</p>
+								<p style="width:100%;text-align:right;" id="timeDisplay" class="gui">Time Left:</p>
+							</div>
+							
+						</div>
+						<canvas id="canvasMap" width="50px" height="50px" class="" style="border-style:solid; border-width:3px; background-color:#fff; margin-top:20px;"></canvas>
+					</div>
+					
+				</div>
+			</div>
+		</template>
+		
+		<template id="infoColumnContent">
+			<h1>Zombie Survival</h1>
+			<!--Edited 6/11/24-->
+			<p class="generalParagraphs">
+				Zombie Survival is (shockingly) a game about surviving hordes of zombies.
+				You move around the screen with the w, a, s, and d keys, and fire using the arrow keys.
+				You can switch between your weapons with 1, 2, and 3.
+				You can replace your currently held weapon by walking into the blue pickups, multicolored pickups are rare but offer exotic weapons.
+				You can explore the world by walking off the side of the map, the world map is visualized in the minimap off to the right of the screen.
+				Note: If you can't walk off the side of the map, there's an obstical blocking you on the next scene, so try a differant area.
+				Avoid and kill zombies, and try to make your way to the exit - the golden square.
+				Once there, it will always be surrounded by obsticals, and you will need an explosive to break into it.
+				Try to find one and escape to the next level before time runs out.
+				Levels get harder the more you clear, and your time gets shorter.
+				The goal of the game is to try and get the highest score possible before dying or running out of time.
+			</p>
+			
+			<p class="generalParagraphs">
+				This game was created in Javascript when I was in junior year of highschool.
+				After <a href="Platformer.html">Platformer</a>'s success, I wanted to create another game that could be accessible to students.
+				This was my first time experimenting with HTML.
+				My other games, as you might have noticed, are simply a 500 x 500 pixel canvas.
+				This one is also on a fixed-sized canvas, as I thought of it as my art style.
+				But it also includes a text-based HUD and a minimap.
+				The Javascript behind this game is also more advanced as well.
+				It features a persistant world-map with destructable terrain, weapons created using object inheritance, collision meshes to keep processing overhead low, and most notably enemy <a href="Pathfinding.html">pathfinding</a>.
+			</p>
+			
+			<p class="generalParagraphs">
+				As I did with my platformer game, I sent this out to my friends and they shared it around as well.
+				It didn't end up reaching the same level of popularity as the platformer, but I did see a few people playing it.
+				One person in particular was very interested in it, they would watch me program it in one of my classes.
+				Eventually, they became curious as to how it worked, and asked me about it.
+				We talked for a while, and he was interested in implimenting his own weapon into the game.
+				I emailed him the base code for the game, and he emailed me back a modded version with his weapon, the Submachine Gun.
+				I incorperated it into the official build of the game.
+				Never before has anyone taken such interest in one of my projects before, so it was an honor for me to add his weapon.
+			</p>
+			
+			<p class="generalParagraphs">
+				I talked about why I belive Platformer had become so successful in the archive for it, but in my opinion, this is what should have gone viral instead.
+				This is the most advanced game I created up to that point, and the polish on it shows.
+				Platformer was designed to be a rage game, but Zombie Survival was designed to be fun.
+				It's designed to put the player under stress with a constantly-ticking timer, scarce health pickups, and hordes of undead, but it's designed to be fair.
+				There is no end to this game, you will eventually loose, but deaths always feel like the players fault, not the games.
+				This is an important distinction to make, as it seperates hard games from rage games.
+				Dark Souls is meant to be a difficult but fair test of skill, and it's fun as a result.
+				Getting Over It by Bennet Foddy is meant to be difficult, but with unpredictable physics and crappy controls.
+				As a result, it's rage inducing, and tends not to be very fun.
+				Platformer was designed along the same vein as like Getting Over It, it's supposed to be bullshit.
+				Zombie Survival is genuinely a fun game that can engage the player for a good chunk of time, and that's why I'm so proud of it.
+				It's a testoment to my game design desitions and creativity.
+			</p>
+			
+			
+			<!--
+			<p class="generalParagraphs">
+				Zombie survival is a game about surviving against zombies, shocking, I know. In this game, you use w, a, s, and d to
+				move around the screen. You can fire your weapons with the arrow keys, and switch your held weapon with 1, 2, and 3. Replace your currently held weapon and find new ones by walking into
+				the blue pickups, multicolored pickups are rare, but give super weapons. You can explore around the map (pictured to the right) by walking off the side of the scene. Avoid zombies
+				and make your way to the exit, the golden square. Once you get there you will need an explosive to break into it. Try to find one before the time runs out.
+			</p>
+					
+			<p class="generalParagraphs">
+				This game was created in JavaScript when I was a Junior in highschool. After I created the platformer game, I wanted 
+				to create another game that was accessible to other students on their chromebooks.
+				This game was my first time experimenting with incorporating HTML elements into the design, including multiple canvases, weapon and health text, etc.
+				This game also uses some more advanced features, like a minimap, chunks, and different weapons made from object inheritence. 
+			</p>
+					
+			<p class="generalParagraphs">
+				I sent this game out to my friends and told them about it. It wasn't nearly as popular as the critically acclaimed Platformer,
+				but I did manage to really interest one person in particular. This person sat next to me in one of my classes and would
+				sometimes watched as I programmed this game. Eventually he became really curious about how the game functioned. One day he asked about the guns in the game, and
+				how I implemented them. He asked me to Email my code to him, which I did, then a bit later he emailed me back a <i>modded</i> version of the game. He added in 
+				a whole new weapon, the submachine gun. I incorporated it into the official build, I never had someone take such interest in my projects before.
+			</p>
+			-->
+		</template>
+		
+		<script type="text/javascript" src="../../templates/splitColumnTemplate.js"></script>
+		
+		<script type="text/javascript" src="zombieSurvival/Astar.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/blocks.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/Enemy.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/Player.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/map.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/guns.js" class="templateScript"></script>
+		<script type="text/javascript" src="zombieSurvival/main.js" class="templateScript"></script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<link rel="icon" type="image/png" href="platformer/favicon.png"/>
+		<link href="../../style.css" rel="stylesheet" type="text/css" />
+	</head>
+  
+  
+	<body>
+		<template id="mainColumnContent">
+			<canvas class="centered" id="canvasPlatformer" width="500px" height="500px" style="z-index:10; width:500px; height:500px; background-color:#fff; margin-top:20px;"></canvas>
+			
+		</template>
+		
+		<template id="infoColumnContent">
+			<h1>Platformer</h1>
+			
+			<!-- Edited 6/11/2024 -->
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				This is a very simple platformer I made in high school.
+				Use the arrow keys to navigate the scene, avoiding the red squares while trying to reach the blue square.
+				Moving into a red square will kill your character and respawn you at the start of the level.
+				You'll lose a life when you die, shown at the top of the screen.
+				If you lose all your lives, the entire game restarts.
+				There are 8 levels in total, none of which are designed to be fair.
+				Good luck!
+			</p>
+			
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				As mentioned, I first made this game in my sophomore year of high school.
+				I was inspired to create a physics-based game after taking a physics class.
+				I wrote the physics engine over a few weeks during downtime in classes and built a game on top of it afterward.
+				The game was designed to be incredibly difficult and downright unfair at times.
+				It was primarily an exercise in developing my game design skills and secondarily a game meant to be played.
+			</p>
+			
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				From a game design perspective, the difficulty ended up being somewhat of a boon for the game in the end.
+				The games typically played in school during downtime were often idle games or grindfests that you would slowly chip away at.
+				These games tended to numb the mind of those playing, delivering doses of dopamine after an achievement, which was suited for the school environment.
+				This game was perfectly fit for school then.
+				It presented a Sisyphean task: an uphill battle against evil level design and unfair game mechanics.
+				Players would expend countless lives on a single level, receive a hit of dopamine upon completion, only to barely glimpse the next level before being sent back to square one.
+				The levels were mind-numbing, but the enticement of progressing to the next one drove players forward.
+				The prospect of reaching the end and conquering it kept players hooked.
+				There was, indeed, an end to it all, but I doubt anyone ever actually reached it due to the game's difficulty.
+			</p>
+			
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				This was the first high-quality game I ever made and one of my first major projects in JavaScript.
+				I shared the game with a few close friends, who then passed it on to others.
+				The game quickly spread throughout the school, and over the next few years, the entire school system was playing it.
+				I was approached several times by random people who wanted to meet "the person who made that platformer game."
+				They would express their frustrations (it's a <i>very</i> hard game) and suggest improvements.
+				This popularity was surreal to me, as I've always been a loner.
+				However, it brought me great joy to see people I didn't know playing my game in classes.
+				I did my best to balance it, fix bugs and exploits, and polish it for these people.
+				Eventually, though, I moved on to other projects, and the school ended up blocking access to the game.
+			</p>
+			
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				I believe this game is what truly sparked my passion for game development.
+				Even years later, it still brings me joy to know that I created something others enjoyed playing.
+				I've always wanted to make games since I was a child.
+				However, witnessing this game come to fruition and gain popularity relatively quickly really highlights what I'm capable of.
+				In fact, it highlights what anyone is capable of; games are art, and no one is barred from creating art.
+				Even a weird loner like me.
+			</p>
+			
+			
+			
+			
+			
+			<!--
+			<p class="generalParagraphs" style="padding-bottom:10px;">
+				In this simple platformer, use the arrow keys to move the red player around the scene,
+				you can wall jump by holding up and moving into the side of a wall. Your goal is to try and get to the blue exit and avoid the red hazards to pass onto the next level.
+				moving into a hazard will kill your charactor, you'll respawn at the start of the level and loose a life. Once
+				all 200 lives (seen at the top of the screen) are depleted, you will restart the whole game.
+				There are 8 levels in total, good luck!
+			</p>
+
+			<p class="generalParagraphs">
+				I first made this game as a sophomore in high school after getting inspired by physics class to make a physics based game.
+				I wrote it in a few weeks using JavaScript. It was my first quality JS game, and as such, it quickly caught on. In school we had these chromebooks, after I sent it
+				to a few friends they then sent it to their friends, and so on and so forth. Over the next few years the whole school system
+				was enjoying this platformer game. So much so, that the site that I hosted it on was blocked by the school. Still though, this resounding, and unexpected success
+				led to me making more JS games and other projects, eventually making a scuffed website to act as a linking page between them. The most notable of these games being my
+				Zombie Survival game.
+			</p>
+			-->
+		</template>
+		
+		
+		<script type="text/javascript" src="../../templates/splitColumnTemplate.js"></script>
+		
+		<script type="text/javascript" src="platformer/Player.js" class="templateScript"></script>
+		<script type="text/javascript" src="platformer/Objects.js" class="templateScript"></script>
+		<script type="text/javascript" src="platformer/Levels.js" class="templateScript"></script>
+		<script type="text/javascript" src="platformer/Main.js" class="templateScript"></script>
+	</body>
+  
+  
+</html>
