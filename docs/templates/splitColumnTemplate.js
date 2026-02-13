@@ -12,6 +12,7 @@ const skeleton = document.createElement("template");
 let path = location.pathname.toString();
 	//Trim directory
 while( path.indexOf("docs") != 0 ){
+	console.log(path);
 	path = path.substring( path.indexOf("/") + 1 );
 };
 	//Find all forward slashes
