@@ -8,7 +8,7 @@ const particleLife = document.createElement("template");
 let path = location.pathname.toString();
 
 	//Trim directory
-if( (path.indexOf("docs") != 0) ){
+if( !(path.indexOf("docs") != 0) ){
 	while( (path.indexOf("docs") != 0) ){
 		path = path.substring( path.indexOf("/") + 1 );
 	};
