@@ -6,14 +6,21 @@ const particleLife = document.createElement("template");
 
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
+let depth = 0;
+
 	//Trim directory
 while( (path.indexOf("docs") != 0) ){
 	console.log("before: " + path);
 	path = path.substring( path.indexOf("/") + 1 );
 	console.log("after : " + path);
+	
+	depth++;
+	if(depth > 500) { 
+		break;
+	};
 };
 	//Find all forward slashes
-let depth = 0;
+depth = 0;
 while( path.indexOf("/") != -1 ){
 	path = path.substring( path.indexOf("/") + 1 );
 	depth++;
