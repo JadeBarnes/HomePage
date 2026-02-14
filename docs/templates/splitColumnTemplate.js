@@ -11,10 +11,23 @@ const skeleton = document.createElement("template");
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
 	//Trim directory
+let localHostTest = 0;
 while( path.indexOf("HomePage") != 0 ){
-	console.log(path);
 	path = path.substring( path.indexOf("/") + 1 );
+	localHostTest++;
+	if(localHostTest >= 6) {
+		break;
+	};
 };
+	//If posted on Github, the path slightly changes
+path = location.pathname.toString();
+if(localHostTest >= 6) {
+	console.log("Local host environment detected");
+	while( path.indexOf("docs") != 0 ){
+		path = path.substring( path.indexOf("/") + 1 );
+	};
+};
+
 	//Find all forward slashes
 let depth = 0;
 while( path.indexOf("/") != -1 ){
@@ -54,7 +67,6 @@ actualHeader.innerHTML = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaiden's Homepage</title>
-<link href="` + toRootDirectory + `style.css" rel="stylesheet" type="text/css" />
 `
 
 headerBar.innerHTML = `
@@ -64,17 +76,17 @@ headerBar.innerHTML = `
 	 	<div class='topBarButtonPanel'>
 	 		`+ homeButtonStatus +`
 				<p class='bt'>
-					<img src='` + toRootDirectory + `icons/home.png' class='buttonImg'>Homepage</img>
+					<img src='` + toRootDirectory + `assets/icons/home.png' class='buttonImg'>Homepage</img>
 				</p>
 			</a>
 	 		`+ portfolioButtonStatus +`
 				<p class='bt'>
-					<img src='` + toRootDirectory + `icons/portfolio.png' class='buttonImg'>Portfolio</img>
+					<img src='` + toRootDirectory + `assets/icons/portfolio.png' class='buttonImg'>Portfolio</img>
 				</p>
 			</a>
 				`+ aboutMeButtonStatus +`
 					<p class='bt'>
-						<img src='` + toRootDirectory + `icons/aboutme.png' class='buttonImg'>About me</img>
+						<img src='` + toRootDirectory + `assets/icons/aboutme.png' class='buttonImg'>About me</img>
 					</p>
 				</a>
 		</div>
@@ -83,6 +95,7 @@ headerBar.innerHTML = `
 
 footerBar.innerHTML = `
 <div id="bottomBar">
+	<button id="dyslexicFontButton" type="button" onclick="toggleDyslexicFont()" style="float:right;"> Change font </button>
 	<p class="bottomText">Contact Me At:</p>
 	<p class="bottomText">michaelapbarneswork@gmail.com</p>
 </div>
@@ -130,48 +143,45 @@ document.body.appendChild(headerBar.content);
 document.body.appendChild(skeleton.content);
 	//Footer
 document.body.appendChild(footerBar.content);
-/*
-//Run scripts
-//I don't know why I have to do this here and not in my other templates, but whatever
-let allscripts = document.getElementsByClassName("templateScript");
-depth = 0;
-let scriptLoaded = false;
-recursiveLoadScript();
 
 
-async function recursiveLoadScript(){
-	//Debug
-	//console.log(allscripts);
-	console.log("Proccessing script " + (depth + 1));
+
+
+
+let font = getCookie("font");
+let bigElementThatMakesAllTheRules = document.querySelector("*");
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function toggleDyslexicFont(){
+	font = getCookie("font");
 	
-	//Copy script
-	let newScript = document.createElement("script");
-	newScript.src = allscripts.item(0).src;
-	newScript.setAttribute("async", "");
-	document.getElementById("putTheScriptsHereBaka").appendChild(newScript);
-	
-	
-	//Wait for it to laod
-	while(true){
-		if(scriptLoaded){
-			scriptLoaded = false;
-			break;
-		} else {
-			//Halt execution
-			console.log("...");
-			await Sleep(100);
-		};
+	if (font === "" || font === "tohama"){
+		document.cookie = "font=openDylsexic; expires=; path=/"; 
+		bigElementThatMakesAllTheRules.style.fontFamily = "OpenDyslexic";
+	} else if (font === "openDylsexic"){
+		document.cookie = "font=tohama; expires=; path=/"; 
+		bigElementThatMakesAllTheRules.style.fontFamily = "Tahoma";
 	};
 	
-	
-	//Recursively call this function again
-	depth += 1;
-	allscripts[0].parentNode.removeChild( allscripts[0] )
-	if(allscripts.length == 0 ){ return; };
-	recursiveLoadScript();
+	font = getCookie("font");
+	console.log(font);
 }
-
-function Sleep(ms) {
-	return new Promise(resolve => setTimeout(resolve, ms));
-}
-*/
+if (font === "" || font === "tohama"){
+	bigElementThatMakesAllTheRules.style.fontFamily = "Tahoma";
+} else if (font === "openDylsexic"){
+	bigElementThatMakesAllTheRules.style.fontFamily = "OpenDyslexic";
+};

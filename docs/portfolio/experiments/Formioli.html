@@ -1,109 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Michael's Homepage</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
-	<link rel="icon" type="image/png" href="Formioli Fonts/favicon.png"/>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Michael's Homepage</title>
+		<link href="../../assets/style.css" rel="stylesheet" type="text/css" />
+		<link type="text/css"  href="formiolliFont/formiolliStyle.css" rel="stylesheet"  charset="utf-8" />
+		<link type="image/png" href="formiolliFont/favicon.png"        rel="icon" />
+		<script type="text/javascript" src="formiolliFont/changeFont.js"></script>
+	</head>
   
   
-  <body>
-	<div id="backPanel">
-		<div style="width:100%; height:100%;" id="canvasHolder">
-			<canvas id="canvas">
-			</canvas>
-		</div>
-		<script type="text/javascript" src="particle.js"></script>
-		<script type="text/javascript" src="main.js"></script>
-	
-		<div style="width:100%;height:100%;">
-			<div class="topBar">
-				<p class="title formiolli" style="font-size:48px;">Michael Barnes</p>
-				<hr class="title">
-				<div class="topBarButtonPanel" style="height:46px">
-					<a href="index.html" class="custyButton custyButtonTopBar formiolli" id="topBarButton"  style="padding-top:6px;" > <p class="bt" style="font-family: formiollimedium;"><img src="icons/home.png" class="buttonImg" style="margin-top:1px; margin-left:4px;">Homepage</p> </a>
-					<a href="Portfolio.html" class="deadButton custyButtonTopBar formiolli" id="topBarButton" style="padding-top:6px;" > <p class="bt" style="font-family: formiollimedium;"><img src="icons/portfolio.png" class="buttonImg" style="margin-top:1px; margin-left:4px;">Portfolio</p> </a>
+	<body>
+		<template id="pageContent">
+			<div id="middleBit">
+				<h1 class="formiolli">Formiolli Fonts</h1>
+				<button type="button"  id="changeFontButton" onclick="toggleFont()"> Toggle font on/off </button>
+				 
+				<div>
+					<p class="generalParagraphs formiolli">
+						I was making a game a while back that I ended up abandoning.
+						Before I did though, I was working on the GUI and decided that I wanted to make my own font to fit with the style of the game.
+						This approach would also allow me to bake in unique symbols that were used in the game world.
+						I'll almost certainly come back to that game concept at some point in the future since it's been on my mind ever since.
+					</p>
+					<p class="generalParagraphs formiolli">
+						There are two font families that I made that were designed to be used in differant parts of the game.
+						"Formiolli Medium" is what you're reading right now.
+						This was supposed to be used for larger GUI elements and books that could be found and read in-game.
+						It's supposed to look slightly hand-written, since it's designed for scripts in a Tolkien-esque fantasy game.
+					</p>
+					<p class="generalParagraphs formiolliSmall" style="font-size:32px;">
+						"Formiolli Small" is designed to be used for small GUI elements, such as damage numbers when you strike an enemy.
+						Because of this, it has special symbols associated with it to represent damage types in the game.
+						For example @ represents fire damage and ¬ represents acid damage.
+						What you see here is scaled up to double it's normal size, since the in-game camera was zoomed in more than most monitors.
+						You can see what it would look like in it's unaltered state below in the examples.
+					</p>
+					<p class="generalParagraphs formiolli">
+						While these aren't the most practical fonts for uses outside the game, you can still pick them up if you'd like!
+						You can download them below, there's no restriction on their usage.
+					</p>
 					
-					<a href="AboutMe.html" class="custyButton custyButtonTopBar formiolli" id="topBarButton"  style="padding-top:6px;" > <p class="bt" style="font-family: formiollimedium;"><img src="icons/aboutme.png" class="buttonImg" style="margin-top:1px; margin-left:4px;">About me</p> </a>
+					<a  class="formiolli" href="Formioli Fonts/Formioli Fonts.zip" download="Blaster Boi">Download Fonts (.ttf, 8.6KB)</a>
 				</div>
 				
-			</div>
-		
-			<div id="middleBit">
-				<p class="formiolli" style="font-size:32px;">Formiolli Fonts</p>
-				<p class="generalParagraphs formiolli">
-					I needed a custom font for a game that I am making, instead of downloading one like a sensible person I just made my own. It only supports english and
-					most common symbols. As you can tell it's eccentric and pixelated, I personally love it. It can only be scaled in multiples of 16px or it'll be blurry.
-				</p>
-				<p class="generalParagraphs formiolliSmall">
-					I also made a smaller version for the same game. This text supports less symbols, as some symbols have been converted into special symbols specifically for
-					the game. This must also be scaled in multiples of 16px.
-				</p>
-				<p class="generalParagraphs formiolli">
-					If you enjoy these fonts and wish to use them for anything, feel free to pick them up! You can download them below, go nuts.
-				</p>
+				<hr style="margin-top:20px; margin-bottom:20px;" />
 				
-				<a  class="formiolli" href="Formioli Fonts/Formioli Fonts.zip" download="Blaster Boi">Download Fonts (.ttf, 8.6KB)</a>
-				
-				<hr class="title">
-				
-				
-				<p class="formiolli" style="font-size:32px;">Formiolli Test</p>
+				<div>
+					<h2 class="formiolli">Formiolli Examples</h2>
 
-				<p class="generalParagraphs formiolli" style="font-size:32px;">
-					The quick brown fox jumps over the lazy dog.
-				</p>
-				<p class="generalParagraphs formiolli" style="font-size:32px;">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi.
-				</p>
-				<p class=" formiolli" style="font-size:32px;">
-					Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-				</p>
-				<p class="generalParagraphs formiolli" style="font-size:32px;">
-					!#$%^&*()_~+-={}[]|\:";'<>,.?/
-				</p>
+					<p class="generalParagraphs formiolli">
+						The quick brown fox jumps over the lazy dog.
+					</p>
+					<p class="generalParagraphs formiolli">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi.
+					</p>
+					<p class="generalParagraphs formiolli">
+						Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+					</p>
+					<p class="generalParagraphs formiolli">
+						!#$%^&*()_~+-={}[]|\:";'<>,.?/
+					</p>
+				</div>
 				
-				
-				<p class="formiolliSmall" style="font-size:48px;">Formiolli Small Test</p>
-				<p class="generalParagraphs formiolliSmall" style="font-size:32px;">
-					The quick brown fox jumps over the lazy dog.
-				</p>
-				<p class="generalParagraphs formiolliSmall" style="font-size:32px;">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi.
-				</p>
-				<p class=" formiolliSmall" style="font-size:32px;">
-					Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-				</p>
-				<p class="generalParagraphs formiolliSmall" style="font-size:32px;">
-					!#%^&*()_~+-={}[]|\:";'<>,.?/
-				</p>
-				<p class="formiolliSmall" style="font-size:32px;">
-					Special Symbols : $@¢¥¼½¾&times;÷¤¬
-				</p>
-				<p style="font-size:32px;">
-					=
-				</p>
-				<p style="font-size:20px;">
-					Special Symbols : $@¢¥¼½¾&times;÷¤¬
-				</p>
+				<div style="margin-bottom:20px;">
+					<h2 class="formiolliSmall">Formiolli Small Examples</h2>
+					
+					<p class="generalParagraphs formiolliSmall">
+						The quick brown fox jumps over the lazy dog.
+					</p>
+					<p class="generalParagraphs formiolliSmall">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi.
+					</p>
+					<p class="generalParagraphs formiolliSmall">
+						Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+					</p>
+					
+					<p class="generalParagraphs formiolliSmall">
+						!#%^&*()_~+-={}[]|\:";'<>,.?/
+					</p>
+					<p class="formiolliSmall" style="font-size:32px;">
+						Unique Symbols : $ @ ¢ ¥ ¼ ½ ¾ &times ; ÷ ¤ ¬
+					</p>
+					<p style="font-size:32px;">
+						=
+					</p>
+					<p>
+						Replaces Symbols : $ @ ¢ ¥ ¼ ½ ¾ &times ; ÷ ¤ ¬
+					</p>
+				</div>
 			</div>
 			
-			
-			
-			<div id="bottomBar">
-				<p class="formiolli">
-					<p style="font-family: formiollimedium;">Contact Me At:</p>
-					<p style="font-family: formiollimedium;">michaelapbarneswork@gmail.com</p>
-				</p>
-			</div>
-		</div>
-
-	</div>
-  </body>
-  
-  
+		</template>
+		<script type="text/javascript" src="../../templates/standardTemplate.js"></script>
+	</body>
 </html>

@@ -57,43 +57,80 @@
 }
 
 
+
+
+
+/* Open Dyslexic font */
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('openDyslexicFont/OpenDyslexic-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	size-adjust:67%;
+	font-display: block;
+}
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('openDyslexicFont/OpenDyslexic-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	size-adjust:67%;
+	font-display: block;
+}
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('openDyslexicFont/OpenDyslexic-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	size-adjust:67%;
+	font-display: block;
+}
+@font-face {
+	font-family: 'OpenDyslexic';
+	src: url('openDyslexicFont/OpenDyslexic-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	size-adjust:67%;
+	font-display: block;
+}
+
+
+
+
+/* Global Elements */
+/* ============================================================================================ */
+
 * {
 	text-align:center;
 	box-sizing:border-box;
 	margin:0px;
 	padding:0px;
 	font-size:16px;
-	font-family:Tahoma;
 }
 
-img {
-	
-	image-rendering: smooth;
-	/*image-rendering: smooth;*/
-	/*image-rendering: pixelated;*/
-}
-
-p.title {
-	font-size:50px;
-	color: var(--barTextColor);
-}
-
-.title {
-	color: var(--barTextColor);
-}
 
 hr {
 	border: 1px solid var(--horizontalLineColor);
-	/*color: var(--horizontalLineColor);
-	background-color: var(--horizontalLineColor);*/
 }
-
 
 html,body {
 	min-width:100vw;
 	min-height:100vh;
 	position:absolute;
 	z-index:-100;
+}
+
+body {
+	background-color: var(--backgroundColor);
+	position: absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	z-index:-1;
 }
 
 #canvas {
@@ -111,6 +148,7 @@ html,body {
 	width:100%;
 	height:100%;
 }
+
 #canvasHolder {
 	position: absolute;
 
@@ -120,7 +158,105 @@ html,body {
 	z-index:0;
 }
 
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
 
+
+
+/* Global image Elements */
+img {
+	
+	image-rendering: smooth;
+	/*image-rendering: smooth;*/
+	/*image-rendering: pixelated;*/
+}
+
+img.portrait {
+	image-rendering: smooth;
+	width:210px;
+	height:280px;
+	background-color:white;
+}
+img.landscape {
+	image-rendering: smooth;
+	width:320px;
+	height:230px;
+	background-color:white;
+}
+
+
+
+/* Global Text Elements */
+p.title {
+	font-size:50px;
+	color: var(--barTextColor);
+}
+
+h1 {
+	font-size:32px;
+}
+
+h2 {
+	font-size:20px;
+	font-weight: bold;
+	
+	
+	text-align:center;
+}
+h3 {
+	font-size:16px;
+	font-weight: bold;
+	text-decoration-line: underline;
+	text-align:center;
+}
+ul {
+	padding-left:30px;
+	margin-bottom:10px;
+}
+li {
+	text-align:left;
+}
+
+.bottomText {
+	color: var(--barTextColor);
+}
+
+.generalParagraphs {
+	text-align:left;
+	margin:4px;
+	text-indent:20px;
+	padding-bottom:10px;
+}
+.columnHolder{
+	max-height:100%;
+	width:100%;
+	max-width:100%;
+	display:flex;
+}
+.rowHolder{
+	max-height:100%;
+	width:100%;
+	max-width:100%;
+	display:flex;
+	flex-direction:column;
+	overflow:hidden;
+}
+
+.spaceBetween{
+	justify-content:space-between;
+}
+
+.halfWidth{
+	height:100%;
+	width:100%;
+	
+	position:relative;
+}
+
+
+/* Global Structural Elements */
 .topBar {
 	background-color: var(--barColorLight);
 	position: sticky;
@@ -181,6 +317,7 @@ html,body {
   background-color: var(--buttonColorHover);
   color: var(--buttonTextColorHover);
 }
+
 .custyButtonTopBar:active {
 	background-color: var(--buttonColorClicked);
 	color: var(--buttonTextColorClick);
@@ -200,11 +337,6 @@ html,body {
 	-moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
-
-    /*
-		Introduced in IE 10.
-		See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-    */
     -ms-user-select: none;
     user-select: none;
 
@@ -240,25 +372,6 @@ html,body {
 	
 }
 
-.centered {
-	
-	margin-left: auto;
-	margin-right: auto;
-}
-
-body {
-	background-color: var(--backgroundColor);
-	position: absolute;
-	left:0px;
-	right:0px;
-	bottom:0px;
-
-	width:100%;
-	height:100%;
-	overflow:hidden;
-	z-index:-1;
-}
-
 #bottomBar {
 	background-color: var(--barColorLight);
 	position: sticky;
@@ -272,58 +385,37 @@ body {
 
 
 
-.bottomText {
-	color: var(--barTextColor);
-}
-
-.generalParagraphs {
-	text-align:left;
-	margin:4px;
-	text-indent:20px;
-	padding-bottom:10px;
-}
-
-.formiolli {
-	font-size:16px;
-	font-family:formiollimedium;
-}
-.formiolliSmall {
-	font-size:16px;
-	font-family:formiollismallmedium;
-}
-
-.columnHolder{
-	max-height:100%;
-	width:100%;
-	max-width:100%;
-	display:flex;
-}
-.rowHolder{
-	max-height:100%;
-	width:100%;
-	max-width:100%;
-	display:flex;
-	flex-direction:column;
-	overflow:hidden;
-}
-
-.spaceBetween{
-	justify-content:space-between;
-}
-
-.halfWidth{
-	height:100%;
-	width:100%;
+#dyslexicFontButton {
+	background-color: var(--buttonColorNormal);
+	border-radius: 3px;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	text-align: center;
+	transition-duration: 0.2s;
+	cursor: pointer;
 	
-	position:relative;
+	width:100px;
+	height:40px;
+	margin-right:3px
+}
+
+#dyslexicFontButton:hover {
+  background-color: var(--buttonColorHover);
+  color: var(--buttonTextColorHover);
+}
+
+#dyslexicFontButton:active {
+	background-color: var(--buttonColorClicked);
+	color: var(--buttonTextColorClick);
+	transition-duration: 0s;
 }
 
 
 
 
-
-
-
+/* Portfolio Elements */
+/* ============================================================================================ */
 p.portfolioCategoryHeading {
 	font-size:20px;
 	text-align:center;
@@ -375,6 +467,20 @@ img.portfolioPieceIcon {
 	filter:brightness(0.0);
 }
 
+div.galleryContainer {
+	margin:5px;
+	width:210px;
+}
+div.galleryContainerLandscape {
+	margin:5px;
+	width:320px;
+}
+
+
+
+
+
+/* Portfolio Text Elements */
 p.portfolioPieceTextTitle {
 	text-align:left;
 	margin-left:2px;
@@ -387,13 +493,6 @@ p.portfolioPieceTextDescription {
 	margin-top:2px;
 	margin-right:2px;
 }
-
-@media only screen and (max-width : 600px){
-    .ppR {
-		display:none;
-	}
-}
-
 
 .infoPanel {
 	position:absolute;
@@ -421,55 +520,22 @@ p.portfolioPieceTextDescription {
 	overflow:auto; 
 }
 
-
-
-
-
-
-
-h1 {
-	font-size:32px;
-}
-
-h2 {
-	font-size:20px;
-	font-weight: bold;
-	
-	
-	text-align:center;
-}
-h3 {
-	font-size:16px;
-	font-weight: bold;
-	text-decoration-line: underline;
-	text-align:center;
+h2.modSubtitle {
+	margin-bottom:10px;
 }
 
 
 
 
-img.portrait {
-	image-rendering: smooth;
-	width:210px;
-	height:280px;
-	background-color:white;
-}
-img.landscape {
-	image-rendering: smooth;
-	width:320px;
-	height:230px;
-	background-color:white;
-}
 
 
-div.galleryContainer {
-	margin:5px;
-	width:210px;
-}
-div.galleryContainerLandscape {
-	margin:5px;
-	width:320px;
-}
+
+
+
+
+
+
+
 
 p.galleryPieceTitle {
 	font-size:16px;
@@ -481,15 +547,19 @@ p.galleryPieceDescription {
 	margin-bottom:4px;
 }
 
-h2.modSubtitle {
-	margin-bottom:10px;
-}
 
 
-ul {
-	padding-left:30px;
-	margin-bottom:10px;
-}
-li {
-	text-align:left;
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 600px){
+    .ppR {
+		display:none;
+	}
 }

@@ -7,9 +7,23 @@ const infoPanel = document.createElement("template");
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
 	//Trim directory
+let localHostTest = 0;
 while( path.indexOf("HomePage") != 0 ){
 	path = path.substring( path.indexOf("/") + 1 );
+	localHostTest++;
+	if(localHostTest >= 6) {
+		break;
+	};
 };
+	//If posted on Github, the path slightly changes
+path = location.pathname.toString();
+if(localHostTest >= 6) {
+	console.log("Local host environment detected");
+	while( path.indexOf("docs") != 0 ){
+		path = path.substring( path.indexOf("/") + 1 );
+	};
+};
+
 	//Find all forward slashes
 let depth = 0;
 while( path.indexOf("/") != -1 ){
@@ -35,19 +49,18 @@ actualHeader.innerHTML = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jaiden's Homepage</title>
-<link href="` + toRootDirectory + `style.css" rel="stylesheet" type="text/css" />
 `
 
 minimalistHeaderBar.innerHTML = `
 <div style="width:100%;height:100%;">
 	<div class="columnHolder" style="justify-content:left;">
 		<div class="topBarButtonPanel" style="height:38px;" >
-			<a href="../Portfolio.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../../icons/back.png" class="buttonImg">Back</p> </a>
-			<a href="../../home.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../../icons/home.png" class="buttonImg">Home</p> </a>
+			<a href="../Portfolio.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../../assets/icons/back.png" class="buttonImg">Back</p> </a>
+			<a href="../../home.html" class="custyButton custyButtonTopBar" id="topBarButton" > <p class="bt"><img src="../../assets/icons/home.png" class="buttonImg">Home</p> </a>
 		</div>
 		
 		<div class="topBarButtonPanel" style="height:38px;" >
-			<a onclick="myFunction()" class="custyButton custyButtonTopBar" id="topBarButton" style="width:150px" > <p class="bt"><img src="../../icons/questionmark.png" class="buttonImg">About</p> </a>
+			<a onclick="myFunction()" class="custyButton custyButtonTopBar" id="topBarButton" style="width:150px" > <p class="bt"><img src="../../assets/icons/questionmark.png" class="buttonImg">About</p> </a>
 		</div>
 	</div>
 </div>
@@ -84,3 +97,43 @@ function myFunction() {
 		x.style.display = "none";
 	}
 }
+
+
+
+
+let font = getCookie("font");
+let bigElementThatMakesAllTheRules = document.querySelector("*");
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function toggleDyslexicFont(){
+	font = getCookie("font");
+	
+	if (font === "" || font === "tohama"){
+		document.cookie = "font=openDylsexic; expires=; path=/"; 
+		bigElementThatMakesAllTheRules.style.fontFamily = "OpenDyslexic";
+	} else if (font === "openDylsexic"){
+		document.cookie = "font=tohama; expires=; path=/"; 
+		bigElementThatMakesAllTheRules.style.fontFamily = "Tahoma";
+	};
+	
+	font = getCookie("font");
+}
+if (font === "" || font === "tohama"){
+	bigElementThatMakesAllTheRules.style.fontFamily = "Tahoma";
+} else if (font === "openDylsexic"){
+	bigElementThatMakesAllTheRules.style.fontFamily = "OpenDyslexic";
+};
