@@ -13,7 +13,7 @@ if( !(path.indexOf("docs") != 0) ){
 		path = path.substring( path.indexOf("/") + 1 );
 	};
 } else {
-	console.log(path);
+	path = path.substring( path.indexOf("/") + 1 );
 };
 
 	//Find all forward slashes
