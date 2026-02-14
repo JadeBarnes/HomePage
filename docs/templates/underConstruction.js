@@ -12,7 +12,7 @@ const noticeBar = document.createElement("template");
 let pathForNotice = location.pathname.toString();
 	//Trim directory
 let localHostTestForNotice = 0;
-while( pathForNotice.indexOf("HomePage") != 0 ){
+while( pathForNotice.indexOf("docs") != 0 ){
 	pathForNotice = pathForNotice.substring( pathForNotice.indexOf("/") + 1 );
 	localHostTestForNotice++;
 	if(localHostTestForNotice >= 6) {
