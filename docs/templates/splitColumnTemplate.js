@@ -10,7 +10,6 @@ const skeleton = document.createElement("template");
 
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
-let depth = 0;
 
 	//Trim directory
 if( (path.indexOf("docs") != 0) ){
