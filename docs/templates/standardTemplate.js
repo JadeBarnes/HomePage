@@ -8,21 +8,23 @@ const particleLife = document.createElement("template");
 let path = location.pathname.toString();
 
 	//Trim directory
+let depth = 0;
+console.log(path.indexOf("docs"));
 if( !(path.indexOf("docs") != 0) ){
 	while( (path.indexOf("docs") != 0) ){
+		console.log(path);
 		path = path.substring( path.indexOf("/") + 1 );
 	};
 } else {
-	path = path.substring( path.indexOf("/") + 1 );
+	depth = -1;
 };
 
 	//Find all forward slashes
-let depth = 0;
 while( path.indexOf("/") != -1 ){
 	path = path.substring( path.indexOf("/") + 1 );
 	depth++;
 };
-//console.log("File Depth = " + depth);
+
 	//Generate directory ammendment
 let toRootDirectory = ``;
 let i = 1;
