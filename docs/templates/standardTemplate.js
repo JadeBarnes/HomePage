@@ -7,21 +7,10 @@ const particleLife = document.createElement("template");
 //Find path to root directory. This is used for icons and links
 let path = location.pathname.toString();
 	//Trim directory
-let localHostTest = 0;
-while( path.indexOf("docs") != 0 ){
+while( (path.indexOf("docs") != 0) ){
+	console.log("before: " + path);
 	path = path.substring( path.indexOf("/") + 1 );
-	localHostTest++;
-	if(localHostTest >= 6) {
-		break;
-	};
-};
-	//If posted on Github, the path slightly changes
-path = location.pathname.toString();
-if(localHostTest >= 6) {
-	console.log("Local host environment detected");
-	while( path.indexOf("docs") != 0 ){
-		path = path.substring( path.indexOf("/") + 1 );
-	};
+	console.log("after : " + path);
 };
 	//Find all forward slashes
 let depth = 0;
