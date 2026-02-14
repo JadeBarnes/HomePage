@@ -14,7 +14,7 @@ let path = location.pathname.toString();
 	//Trim directory
 let depth = 0;
 console.log(path.indexOf("docs"));
-if( !(path.indexOf("docs") != 0) ){
+if( (path.indexOf("docs") != -1) ){
 	while( (path.indexOf("docs") != 0) ){
 		console.log(path);
 		path = path.substring( path.indexOf("/") + 1 );
