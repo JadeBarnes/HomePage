@@ -9,10 +9,8 @@ let path = location.pathname.toString();
 
 	//Trim directory
 let depth = 0;
-console.log(path.indexOf("docs"));
 if( (path.indexOf("docs") != -1) ){
 	while( (path.indexOf("docs") != 0) ){
-		console.log(path);
 		path = path.substring( path.indexOf("/") + 1 );
 	};
 } else {
@@ -85,7 +83,7 @@ headerBar.innerHTML = `
 
 footerBar.innerHTML = `
 <div id="bottomBar">
-	<button id="dyslexicFontButton" type="button" onclick="toggleDyslexicFont()" style="float:right;"> Change font </button>
+	<button id="dyslexicFontButton" type="button" onclick="toggleDyslexicFont()" style="float:right;"> Change Font </button>
 	
 	
 	<p class="bottomText">Contact Me At:</p>

@@ -6,14 +6,24 @@ function toggleFont(){
 	let allElementsBig = document.querySelectorAll(".formiolli");
 	let allEmementsSmall = document.querySelectorAll(".formiolliSmall");
 	
+	let desiredFont = getCookie("font");
+	
+	if(desiredFont === "" || desiredFont === "tohama"){
+		desiredFont = "Tahoma";
+	} else {
+		desiredFont = "OpenDyslexic";
+	};
+	
+	
+	
 	
 	if(formioliFontOn){
 		for (const e of allElementsBig) {
-			e.style.fontFamily = "Tahoma";
+			e.style.fontFamily = desiredFont;
 		};
 		
 		for (const e of allEmementsSmall) {
-			e.style.fontFamily = "Tahoma";
+			e.style.fontFamily = desiredFont;
 		};
 	} else {
 		for (const e of allElementsBig) {
@@ -24,7 +34,6 @@ function toggleFont(){
 			e.style.fontFamily = "formiollismallmedium";
 		};
 	};
-	
-	
+
 	formioliFontOn = !formioliFontOn;
 }

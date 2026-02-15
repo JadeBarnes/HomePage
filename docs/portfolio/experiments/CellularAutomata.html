@@ -21,7 +21,7 @@
 				<p class="generalParagraphs">
 					Now, let's step the simulation forward. We loop over every cell, every cell checks it's 8 neighbors and counts how many are alive.
 					If a cell has less than two neighbors, it dies from loneliness. If the cell has 2 or 3 neighbors, it lives to the next generation.
-					If a cell has 4 or more neighbors, it dies from overpopulation. But, we also loop over the dead cells, in conways weird world,
+					If a cell has 4 or more neighbors, it dies from overpopulation. But, we also loop over the dead cells, in Conway's weird world,
 					if a dead cell has exactly 3 alive neighbors, the cell turns alive as they reproduce. <b>Note that all the changes are applied at the
 					same time.</b> We can boil this down to some simple rules:
 				</p>
@@ -90,7 +90,7 @@
 				</p>
 				<img src="cells/tringle.png" style="width:275px;height:275px;margin:0px;">
 				<p class="generalParagraphs" style="padding-bottom:5px">
-					After playing around with this automata, I noticed something peculiar. Creating a straight line of alive cells with this rule will result in a sierpinski's triangle
+					After playing around with this automata, I noticed something peculiar. Creating a straight line of alive cells with this rule will result in a Sierpiński's triangle
 					pattern. Another reason why this automata is amazing. I've included a program that simulates this in the package as well.
 				</p>
 				

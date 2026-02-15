@@ -9,10 +9,8 @@ let path = location.pathname.toString();
 
 	//Trim directory
 let depth = 0;
-console.log(path.indexOf("docs"));
 if( (path.indexOf("docs") != -1) ){
 	while( (path.indexOf("docs") != 0) ){
-		console.log(path);
 		path = path.substring( path.indexOf("/") + 1 );
 	};
 } else {
@@ -25,7 +23,7 @@ while( path.indexOf("/") != -1 ){
 	depth++;
 };
 
-	//Generate directory ammendment
+	//Generate directory amendment
 let toRootDirectory = ``;
 let i = 1;
 while( i != depth ){

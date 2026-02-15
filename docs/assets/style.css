@@ -385,7 +385,7 @@ li {
 
 
 
-#dyslexicFontButton {
+button {
 	background-color: var(--buttonColorNormal);
 	border-radius: 3px;
 	border-color: black;
@@ -394,23 +394,30 @@ li {
 	text-align: center;
 	transition-duration: 0.2s;
 	cursor: pointer;
+	padding:4px;
 	
-	width:100px;
-	height:40px;
-	margin-right:3px
 }
 
-#dyslexicFontButton:hover {
+
+
+button:hover {
   background-color: var(--buttonColorHover);
   color: var(--buttonTextColorHover);
 }
 
-#dyslexicFontButton:active {
+button:active {
 	background-color: var(--buttonColorClicked);
 	color: var(--buttonTextColorClick);
 	transition-duration: 0s;
 }
 
+#dyslexicFontButton {
+	position:absolute;
+	right: 3px;
+	width:100px;
+	height:40px;
+	padding:0px;
+}
 
 
 

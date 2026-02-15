@@ -10,5 +10,4 @@ function toggleDyslexicFont(){
 	};
 	
 	font = getCookie("font");
-	console.log(font);
 }

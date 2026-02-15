@@ -24,14 +24,14 @@
 				Each cell of the grid has 8 neighboring cells, the cell keeps track of the ones that can be traversed into.
 			</p>
 			<p class="generalParagraphs" style="padding-bottom:10px;">
-				So, to start the algorith, we push the cells immediately accessible to the Red square into a list called the "Open Set."
+				So, to start the algorithm, we push the cells immediately accessible to the Red square into a list called the "Open Set."
 				Each cell in the Open Set is marked with a light red.
 				The algorithm updates each of these cells with a cost associated with traveling to it, this is called the "G Cost".
 				Each cell initializes this cost to infinity.
 				Moving horizontally or vertically into a cell has a cost of 1, because it's a square grid.
 				Moving diagonally into a cell has a cost of 1.4.
 				Each cell in the Open Set also stores an "H Cost" or "Heuristic Cost."
-				The heuristic function is simply an estimate to how far away the cell is to the destination, which is estimated using the pythagrian thearum.
+				The heuristic function is simply an estimate to how far away the cell is to the destination, which is estimated using the Pythagorean theorem.
 				Finally, each cell stores an "F Cost" or "Final Cost," this is equal to the G Cost plus the H Cost.
 				The algorithm sorts the set of Open Set cells by their F Cost in ascending order, and chooses the first element to examine in-depth.
 				When examining a cell, the algorithm adds all cells that aren't already in the Open Set to the Open Set, but the algorithm will look at *all* adjacent cells, including those in the Open Set for this next step.
@@ -46,11 +46,11 @@
 				This process repeats until the destination is reached, at which point we recursively follow the breadcrumb trail of pointers back to the starting destination.
 				The trail is stored into a final list representing the route taken to reach the destination, this is displayed with the Green cells.
 				If the Open Set is ever depleted, that means that we've searched all possible paths, but haven't found the destination.
-				This means that the route is blocked completely by an impassable obstical, so the algorithm stops.
+				This means that the route is blocked completely by an impassable obstacle, so the algorithm stops.
 				To save on computation time, the algorithm can end prematurely by keeping track of how many steps have been taken.
 				If this exceeds a certain threshold, the algorithm terminates.
 				Because this demonstration is slowed down to show each step, it wont have any performance overhead.
-				So while this feature is implimented into the algorithm, it has been disabled.
+				So while this feature is implemented into the algorithm, it has been disabled.
 				You can see this feature in action if you play the Zombie Survival game I made - if the titular zombies are too far from the player they'll stop moving.
 			</p>
 		</template>
